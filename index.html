@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>汽车管理后台</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="js/echarts.common.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="wrap_left">
+
+			<ul class="wrap_left1">
+				<li>
+					<span><i class="fa fa-bandcamp fa-1x"></i></span>
+					<span>车品销售后台</span>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-truck fa-stack-1x"></i>
+					</span>
+
+					<span>库存管理</span>
+					<ul class="sto_mane">
+						<li>北部总仓</li>
+						<li>西南商城</li>
+						<li>华北总代仓</li>
+					</ul>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-file-text fa-stack-1x"></i>
+					</span>
+
+					<span>订单管理</span>
+					<ul class="older">
+						<li>代收款</li>
+						<li>代发货</li>
+						<li>待收货</li>
+						<li>待反馈</li>
+					</ul>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-user fa-stack-1x"></i>
+					</span>
+
+					<span>用户管理</span>
+					<ul class="user_mane">
+
+					</ul>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-cog fa-stack-1x"></i>
+					</span>
+
+					<span>物流配置</span>
+					<ul class="sth_config">
+
+					</ul>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-line-chart fa-stack-1x"></i>
+					</span>
+
+					<span>订单管理</span>
+					<ul class="compu">
+						<li>销售统计对比</li>
+						<li>报表数据</li>
+						<li>对账反馈</li>
+
+					</ul>
+
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-calculator fa-stack-1x"></i>
+					</span>
+
+					<span>计算查询</span>
+
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-users fa-stack-1x"></i>
+					</span>
+
+					<span>合作厂商</span>
+					<ul class="coo">
+						<li>品牌伙伴</li>
+						<li>合同厂商</li>
+						<li>供应商</li>
+
+					</ul>
+				</li>
+				<li>
+					<span class="fa-stack ">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-arrow-down fa-stack-1x"></i>
+					</span>
+
+					<span>文件下载</span>
+
+				</li>
+			</ul>
+
+		</div>
+		<div class="wrap_right">
+
+			<!-- part1 -->
+			<div class="wrap_right1">
+				<div class="user">
+					<div class="user_img">
+						<img src="img/bg.png" alt="">
+					</div>
+					<div class="info">Welcome，XXX</div>
+				</div>
+				<ul class="mane">
+					<li>
+						<i class="fa fa-folder"></i>
+						<ul class="mane_main1">
+							<li>上传文件</li>
+							<li>管理文件</li>
+							<li>查看文件</li>
+							<li>克隆文件</li>
+							
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-tasks"></i>
+						<ul class="mane_main2">
+							<li>查看备份</li>
+							<li>历史记录</li>
+							<li>查看交易</li>
+							<li>克隆文件</li>
+							
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-comment"></i>
+						<ul class="mane_main3">
+							<li>聊天1</li>
+							<li>聊天2</li>
+							<li>聊天3</li>
+							<li>聊天4</li>
+							
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-cog"></i>
+						<ul class="mane_main4">
+							<li>设置1</li>
+							<li>设置2</li>
+							<li>设置3</li>
+							<li>设置4</li>
+							
+						</ul>
+					</li>
+				</ul>
+				<div class="ser">
+					<i class="fa fa-search"></i>
+					<input type="text"  placeholder="搜索">
+				</div>
+			</div>
+
+
+			<!-- part2 -->
+			<div class="cont">
+				<div class="title">
+					<span>库存管理</span>
+					<span>本日库存管理内容已经更新</span>
+				</div>
+				<!-- 库存管理页面 -->
+				<div class="Inventory_management show">
+					<div class="stock">
+						<div class="stock1">
+							<div class="sto_left"></div>
+							<div class="sto_right">
+								<span>1145</span>
+								<span>本部总仓库存</span>
+							</div>
+						</div>
+						<div class="stock2">
+							<div class="sto_left"></div>
+							<div class="sto_right">
+								<span>685</span>
+								<span>西南商城库存</span>
+							</div>
+						</div>
+						<div class="stock3">
+							<div class="sto_left"></div>
+							<div class="sto_right">
+								<span>1248</span>
+								<span>华北总代仓库存</span>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- part3 -->
+					<div class="part3">
+						<div class="details">
+							<div class="detials_top">
+								<div class="detials_top_left">
+									<h4>库存管理</h4>
+									<span>本日库存内容已更新</span>
+								</div>
+								<div class="detials_top_right">
+									...
+								</div>
+							</div>
+							<div class="detials_bottom">
+								<table>
+									<tr>
+										<th>#</th>
+										<th>产品类别</th>
+										<th>入库时间</th>
+										<th>状态</th>
+										<th>操作人</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>车内灯饰V1</td>
+										<td>2018/06/07</td>
+										<td>入库</td>
+										<td>Alice</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>车内灯饰V1</td>
+										<td>2018/06/07</td>
+										<td>入库</td>
+										<td>Alice</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>车内灯饰V1</td>
+										<td>2018/06/07</td>
+										<td>入库</td>
+										<td>Alice</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>车内灯饰V1</td>
+										<td>2018/06/07</td>
+										<td>入库</td>
+										<td>Alice</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>车内灯饰V1</td>
+										<td>2018/06/07</td>
+										<td>入库</td>
+										<td>Alice</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="the_card">
+							<div class="detials_top">
+								<div class="detials_top_left">
+									<h4>库存管理</h4>
+									<span>本日库存内容已更新</span>
+								</div>
+								<div class="detials_top_right">
+									...
+								</div>
+							</div>
+							<div class="detials_bottom">
+								<table>
+									<tr>
+										<th>#</th>
+										<th>产品类别</th>
+
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>车内灯饰V1</td>
+
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>车内灯饰V1</td>
+
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>车内灯饰V1</td>
+
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>车内灯饰V1</td>
+
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>车内灯饰V1</td>
+
+									</tr>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>	
+
+				<!-- 订单管理页面 -->
+				<div class="order_management ">
+
+					<div class="order">
+						<div class="order1">
+							<div class="or_img"><img src="img/or1.png" alt=""></div>
+							<div class="or_mes">
+								<span>20</span><span>单待处理</span>
+
+							</div>
+							<div class="or_if">
+								<span>●</span><span>无新项目需要处理</span>
+							</div>
+						</div>
+						<div class="order2">
+							<div class="or_img"><img src="img/or2.png" alt=""></div>
+							<div class="or_mes">
+								<span>15</span><span>单待处理</span>
+
+							</div>
+							<div class="or_if">
+								<span>●</span><span>有新项目需要处理</span>
+							</div>
+						</div>
+						<div class="order3">
+							<div class="or_img"><img src="img/or3.png" alt=""></div>
+							<div class="or_mes">
+								<span>05</span><span>单待处理</span>
+
+							</div>
+							<div class="or_if">
+								<span>●</span><span>无新项目需要处理</span>
+							</div>
+						</div>
+						<div class="order4">
+							<div class="or_img"><img src="img/or4.png" alt=""></div>
+							<div class="or_mes">
+								<span>02</span><span>单待处理</span>
+
+							</div>
+							<div class="or_if">
+								<span>●</span><span>无新项目需要处理</span>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- part3 -->
+					
+					    <div class="order_list">
+					    	<div class="order_list_top">
+					    		<div class="order_list_top_left">
+					    			<span>订单列表</span><span>订单列表已经更新</span>
+					    		</div>
+					    		<div class="order_list_top_right">
+					    			<select>
+					    				<option value="1">筛选</option>
+					    				<option value="2"></option>
+					    				<option value="3"></option>
+					    			</select>
+					    			<select>
+					    				<option value="1">筛选</option>
+					    				<option value="2"></option>
+					    				<option value="3"></option>
+					    			</select>
+					    		</div>
+					    	</div>
+
+					    	<div class="order_list_bottom">
+					    		<table>
+					    			<tr>
+					    				<th>#</th>
+					    				<th>订单编号</th>
+					    				<th>订单内容</th>
+					    				<th>订单时间</th>
+					    				<th>产生时间</th>
+					    				<th>操作人</th>
+					    			</tr>
+					    			<tr>
+					    				<td>1</td>
+					    				<td>21452146414</td>
+					    				<td>yyz的爱好是发呆</td>
+					    				<td>2018/02/06</td>
+					    				<td>2018/02/06</td>
+					    				<td>yyz</td>
+					    			</tr>
+					    			<tr>
+					    				<td>2</td>
+					    				<td>21452146414</td>
+					    				<td>yyz的爱好是发呆</td>
+					    				<td>2018/02/06</td>
+					    				<td>2018/02/06</td>
+					    				<td>yyz</td>
+					    			</tr>
+					    			<tr>
+					    				<td>3</td>
+					    				<td>21452146414</td>
+					    				<td>yyz的爱好是发呆</td>
+					    				<td>2018/02/06</td>
+					    				<td>2018/02/06</td>
+					    				<td>yyz</td>
+					    			</tr>
+					    			<tr>
+					    				<td>4</td>
+					    				<td>21452146414</td>
+					    				<td>yyz的爱好是发呆</td>
+					    				<td>2018/02/06</td>
+					    				<td>2018/02/06</td>
+					    				<td>yyz</td>
+					    			</tr>
+					    			<tr>
+					    				<td>5</td>
+					    				<td>21452146414</td>
+					    				<td>yyz的爱好是发呆</td>
+					    				<td>2018/02/06</td>
+					    				<td>2018/02/06</td>
+					    				<td>yyz</td>
+					    			</tr>
+					    		</table>
+					    	</div>
+					    </div>
+
+
+
+				</div>
+
+
+				<!-- 用户管理 -->
+				<div class="user_management">
+					<h2 style="text-align: center;margin-top: 100px">开发中...</h2>
+				</div>
+				<!-- 物流配置 -->
+				<div class="logistics">
+					<h2 style="text-align: center;margin-top: 100px">开发中...</h2>
+				</div>	
+				<!-- 数据统计 -->
+				<div class="data_Statistics">
+					<h2 style="text-align: center;margin-top: 100px">开发中...</h2>
+				</div>
+				<!-- 结算查询		 -->
+                 <div class="Settlement">
+					<h2 style="text-align: center;margin-top: 100px">开发中...</h2>
+				</div>
+
+				<!-- 合作厂商页面 -->
+				<div class="Collaborators">
+					<ul class="logo">
+						<li>
+							<div class="logo_img">
+								<img src="img/logo1.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						<li>
+							<div class="logo_img">
+								<img src="img/logo2.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						<li>
+							<div class="logo_img">
+								<img src="img/logo3.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						<li>
+							<div class="logo_img">
+								<img src="img/logo1.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						<li>
+							<div class="logo_img">
+								<img src="img/logo2.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						<li>
+							<div class="logo_img">
+								<img src="img/logo3.png" alt="">
+							</div>
+							<h4>这里是公司的中文名称</h4>
+							<h4>here is the English of company</h4>
+							<p>联系人：Mr.jack</p>
+							<p>联系方式：034542144</p>
+							<p>公司地址：这里是公司的具体地址</p>
+						</li>
+						
+					</ul>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+	
+</body>
+<script>
+	document.querySelector(".wrap").style.height=window.clientHeight;
+
+</script>
+<script src="js/pie.js"></script>
+<script src="js/main.js"></script>
+</html>
